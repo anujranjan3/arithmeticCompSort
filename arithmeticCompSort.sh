@@ -9,6 +9,6 @@ echo "You have entered :" $b "for b";
 read -p "Enter the value of c : " c;
 echo "You have entered :" $c "for c";
 
-echo "Computing c + a / b"
-compute=$(($c+$a/$b));
-echo "After Doing Computation "$c" + "$a" /" $b" we got "$compute;
+echo "Computing a % b + c"
+compute=$(($a%$b+$c));
+echo "After Doing Computation "$a" % "$b" +" $c" we got "$compute;
