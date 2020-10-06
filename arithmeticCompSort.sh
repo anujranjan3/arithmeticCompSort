@@ -23,7 +23,7 @@ sorting () {
 	do
 		for (( k=$j+1; k<$i; k++ ))
 		do
-			if [ ${computeArray[j]} -lt ${computeArray[k]} ]
+			if [ ${computeArray[j]} -gt ${computeArray[k]} ]
 			then
 				temp=${computeArray[j]};
 				computeArray[j]=${computeArray[k]};
@@ -56,6 +56,6 @@ echo "After Doing Computation "$a" % "$b" +" $c" we got "$compute;
 echo "All The Compuations are stored in Dictionary : "${computeDict[@]};
 echo "All the computation are retrieved from dictionary to array :"${computeArray[*]};
 
-echo "Sorting Array in Descending Order "
+echo "Sorting Array in ascending Order "
 sorting;
-echo "Computations are sorted in Descending order :"${computeArray[*]};
+echo "Computations are sorted in ascending order :"${computeArray[*]};
