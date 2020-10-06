@@ -13,8 +13,9 @@ read -p "Enter the value of c : " c;
 echo "You have entered :" $c "for c";
 
 storingDict () {
-	compute=$1;
-	computeDict[(($i))]=$compute;
+	
+	computeDict[i]=$compute;
+	computeArray[i]=${computeDict[i]};
 	(( i++ ));
 }
 
@@ -39,3 +40,4 @@ storingDict $compute;
 echo "After Doing Computation "$a" % "$b" +" $c" we got "$compute;
 
 echo "All The Compuations are stored in Dictionary : "${computeDict[@]};
+echo "All the computation are retrieved from dictionary to array :"${computeArray[*]};
